@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.login">
+
+    <Button
+            android:text="@string/btn_daftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btn_Daftar"
+            android:layout_centerHorizontal="true" android:backgroundTint="@color/colorButtonBlue"
+            android:textColor="@android:color/white" android:layout_below="@id/txtPasswordDaftar"
+            android:layout_marginTop="30dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/txtNamaDaftar" android:layout_centerHorizontal="true" android:layout_marginTop="200dp"
+            android:hint="@string/txt_name" android:singleLine="true" android:selectAllOnFocus="false"
+            style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/txtEmailDaftar" android:layout_centerHorizontal="true"
+            android:hint="@string/txt_email" android:singleLine="true" android:selectAllOnFocus="false"
+            style="@android:style/Widget.DeviceDefault.AutoCompleteTextView" android:layout_below="@id/txtNamaDaftar"
+            android:layout_marginTop="30dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/txtPasswordDaftar" android:layout_centerHorizontal="true"
+            android:hint="@string/txt_password" android:singleLine="true" android:selectAllOnFocus="false"
+            style="@android:style/Widget.DeviceDefault.AutoCompleteTextView" android:layout_below="@id/txtEmailDaftar"
+            android:layout_marginTop="30dp"/>
+</RelativeLayout>

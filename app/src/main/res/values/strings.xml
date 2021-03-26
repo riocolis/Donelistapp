@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">donelistapp</string>
+    <string name="btn_masuk">Masuk</string>
+    <string name="btn_daftar">Daftar</string>
+    <string name="btn_tambah">Tambah</string>
+    <string name="txt_name">Nama</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_greeting">Hi</string>
+    <string name="txt_activity_complete">Activity Done</string>
+    <string name="txt_activity_add">What you gonna do</string>
 </resources>
