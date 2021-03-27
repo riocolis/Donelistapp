@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".activity.homepage">
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floating_action_button"
+            android:id="@+id/fabAktivitas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
@@ -19,6 +19,14 @@
             android:layout_marginTop="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/txtNameHomepage"
+                android:layout_toEndOf="@+id/txtGreeting"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/textView"
+                android:textSize="50dp" android:textColor="@android:color/black"
+                android:layout_marginRight="20dp" android:layout_marginLeft="10dp" android:textStyle="bold"/>
         <TextView
                 android:text="@string/txt_greeting"
                 android:layout_width="wrap_content"

@@ -1,6 +1,6 @@
 package com.example.donelistapp.model
 
 data class User(val id: Int = -1,
-                val name: String,
-                val email: String,
-                val password: String)
+                var name: String = "",
+                var email: String = "",
+                var password: String = "")
