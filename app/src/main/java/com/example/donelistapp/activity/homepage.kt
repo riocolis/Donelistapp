@@ -3,7 +3,10 @@ package com.example.donelistapp.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.donelistapp.R
+import com.example.donelistapp.adapter.TodoAdapter
 import com.example.donelistapp.helper.AppPrefences
 import com.example.donelistapp.helper.Constant
 import com.example.donelistapp.helper.DatabaseHelper
@@ -19,8 +22,11 @@ class homepage : AppCompatActivity() {
         setContentView(R.layout.activity_homepage)
 
         fabAktivitas.setOnClickListener(){
-            startActivity(Intent(this, aktivitas::class.java))
+            startActivity(Intent(this, aktivitas::class.java).apply {
+                putExtra("nameHome",txtNameHomepage.text.toString())
+            })
         }
+        viewTodosFromEmail()
     }
 
     override fun onBackPressed() {
@@ -37,5 +43,14 @@ class homepage : AppCompatActivity() {
         val user = databaseHelper.getUser(emailText)
         txtNameHomepage.text = user!!.name
         super.onStart()
+    }
+
+    private fun viewTodosFromEmail(){
+        databaseHelper = DatabaseHelper(this)
+        val todolist = databaseHelper.allTodos()
+        val adapter = TodoAdapter(this,todolist)
+        val rv : RecyclerView = findViewById(R.id.rvTodos)
+        rv.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL,false)
+        rv.adapter = adapter
     }
 }
